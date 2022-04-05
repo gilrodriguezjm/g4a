@@ -1,3 +1,4 @@
+<%@page import="g4a.entity.Usuario"%>
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,6 +11,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
+    <%
+        Usuario usuario = (Usuario)session.getAttribute("usuario");
+        if (usuario != null) {
+        response.sendRedirect(request.getContextPath() + "/juegos.jsp");
+        }
+    %>
     <body>
         <main>
             <header class="p-3 bg-dark text-white">
@@ -17,7 +24,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <div class="container">
                   <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                       <div class="col-1">   
-                        <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <a href="index.jsp" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                             <img src="img/dm-logo.png" height="70px">
                         </a>
                         
@@ -27,8 +34,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                       </div>
                       <div class="col-3">
                         <div class="text-end">
-                          <button type="button" class="btn btn-outline-light me-2">Iniciar Sesión</button>
-                          <button type="button" class="btn btn-warning">Registrarse</button>
+                          <a href="login.jsp" class="btn btn-outline-light me-2">Iniciar Sesión</a>
+                          <a href="" class="btn btn-warning">Registrarse</a>
                         </div>
                       </div>
                   </div>
@@ -77,22 +84,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <span class="visually-hidden">Siguiente</span>
                     </button>
                 </div>
-        </section>
-            
-            <div class="container">
-                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                  <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                        <img src="img/dm-logo.png" height="30px">
-                    </a>
-                    <span class="text-muted">© 2022 Darkmode</span>
-                  </div>
-
-                  
-                </footer>
-            </div>
-            
+            </section>
+        
         </main>
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <img src="img/dm-logo.png" height="30px">
+                </a>
+                <span class="text-muted">© 2022 Darkmode</span>
+              </div>
+            </footer>
+        </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
