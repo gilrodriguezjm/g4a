@@ -20,6 +20,7 @@
     %>
     <body>
         <h1>Juegos</h1>
+        Lista de jeugos
         <a href="cerrarSesionServlet">Cerrar Sesión</a>
     </body>
 </html>
