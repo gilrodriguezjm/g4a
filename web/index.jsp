@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
     <head>
         <title>Games4All</title>
@@ -27,7 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                       </div>
                       <div class="col-3">
                         <div class="text-end">
-                          <button type="button" class="btn btn-outline-light me-2">Iniciar SesiÃ³n</button>
+                          <button type="button" class="btn btn-outline-light me-2">Iniciar Sesión</button>
                           <button type="button" class="btn btn-warning">Registrarse</button>
                         </div>
                       </div>
@@ -85,7 +80,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
                         <img src="img/dm-logo.png" height="30px">
                     </a>
-                    <span class="text-muted">Â© 2022 Darkmode</span>
+                    <span class="text-muted">© 2022 Darkmode</span>
                   </div>
 
                   
